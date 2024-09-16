@@ -407,7 +407,7 @@
                             <visible>!Skin.HasSetting(DisableAuraHomeLayout) + Integer.IsEqual(Window.Property(CurrentFocus),9014)</visible>
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31516]</label> <!-- Choose Movie Spotlight Style -->
-			    <enable>Skin.HasSetting(EnableSpotlight)</enable>
+                            <enable>Skin.HasSetting(EnableSpotlight)</enable>
                             <onclick>SetProperty(MovieSpotlightStyle,1,home)</onclick>
                             <onclick>ActivateWindow(1132)</onclick>
                         </control>
@@ -416,10 +416,10 @@
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31517]</label> <!-- Choose Movies Spotlight -->
                             <label2>$INFO[Skin.String(spotlightmovies.label)]</label2>
-			    <onclick condition="String.IsEmpty(Skin.String(spotlightmovies.label))">RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetName=spotlightmovies.label&amp;skinWidgetTarget=spotlightmovies.target&amp;skinWidgetPath=spotlightmovies.path)</onclick>
-		            <onclick condition="!String.IsEmpty(Skin.String(spotlightmovies.label))">Skin.Reset(spotlightmovies.label)</onclick>
-		            <onclick condition="!String.IsEmpty(Skin.String(spotlightmovies.path))">Skin.Reset(spotlightmovies.path)</onclick>
-			    <enable>Skin.HasSetting(EnableSpotlight)</enable>
+                            <onclick condition="String.IsEmpty(Skin.String(spotlightmovies.label))">RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetName=spotlightmovies.label&amp;skinWidgetTarget=spotlightmovies.target&amp;skinWidgetPath=spotlightmovies.path)</onclick>
+                            <onclick condition="!String.IsEmpty(Skin.String(spotlightmovies.label))">Skin.Reset(spotlightmovies.label)</onclick>
+                            <onclick condition="!String.IsEmpty(Skin.String(spotlightmovies.path))">Skin.Reset(spotlightmovies.path)</onclick>
+                            <enable>Skin.HasSetting(EnableSpotlight)</enable>
                         </control>
                         <control type="button" id="96694" description="Configure Custom Movie Lists">
                             <visible>!Skin.HasSetting(DisableAuraHomeLayout) + Integer.IsEqual(Window.Property(CurrentFocus),9014)</visible>
@@ -428,7 +428,6 @@
                             <visible>String.IsEqual(Skin.String(spotlightmovies.label),Spotlight Movies)</visible>
                             <onclick>ActivateWindow(1161)</onclick>
                         </control>
-
                         <control type="button" id="96699" description="Choose Spotlight Style">
                             <visible>!Skin.HasSetting(DisableAuraHomeLayout) + Integer.IsEqual(Window.Property(CurrentFocus),9014)</visible>
                             <include>Defs_Settings_Button</include>
@@ -445,13 +444,38 @@
                             <onclick condition="String.IsEmpty(Skin.String(spotlighttvshows.label))">RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetName=spotlighttvshows.label&amp;skinWidgetTarget=spotlighttvshows.target&amp;skinWidgetPath=spotlighttvshows.path)</onclick>
                             <onclick condition="!String.IsEmpty(Skin.String(spotlighttvshows.label))">Skin.Reset(spotlighttvshows.label)</onclick>
                             <onclick condition="!String.IsEmpty(Skin.String(spotlighttvshows.path))">Skin.Reset(spotlighttvshows.path)</onclick>
-			    <enable>Skin.HasSetting(EnableSpotlight)</enable>
+                            <enable>Skin.HasSetting(EnableSpotlight)</enable>
                         </control>
                         <control type="button" id="96693" description="Configure Custom TV Lists">
                             <visible>!Skin.HasSetting(DisableAuraHomeLayout) + Integer.IsEqual(Window.Property(CurrentFocus),9014)</visible>
                             <include>Defs_Settings_Button</include>
                             <label>$LOCALIZE[31521]</label> <!-- Configure Custom TV Lists -->
-			    <visible>String.IsEqual(Skin.String(spotlighttvshows.label),Spotlight TV)</visible>
+                            <visible>String.IsEqual(Skin.String(spotlighttvshows.label),Spotlight TV)</visible>
+                            <onclick>ActivateWindow(1160)</onclick>
+                        </control>
+                        <control type="button" id="96707" description="Choose Spotlight Style">
+                            <visible>!Skin.HasSetting(DisableAuraHomeLayout) + Integer.IsEqual(Window.Property(CurrentFocus),9014)</visible>
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31932]</label> <!-- Choose Custom Spotlight Style -->
+                            <enable>Skin.HasSetting(EnableSpotlight)</enable>
+                            <onclick>SetProperty(CustomSpotlightStyle,1,home)</onclick>
+                            <onclick>ActivateWindow(1132)</onclick>
+                        </control>
+                        <control type="button" id="9671" description="Choose Custom Spotlight">
+                            <visible>Integer.IsEqual(Window.Property(CurrentFocus),9014)</visible>
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31935]</label> <!-- Choose Custom Spotlight -->
+                            <label2>$INFO[Skin.String(spotlightcustom.label)]</label2>
+                            <onclick condition="String.IsEmpty(Skin.String(spotlightcustom.label))">RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetName=spotlightcustom.label&amp;skinWidgetTarget=spotlightcustom.target&amp;skinWidgetPath=spotlightcustom.path)</onclick>
+                            <onclick condition="!String.IsEmpty(Skin.String(spotlightcustom.label))">Skin.Reset(spotlightcustom.label)</onclick>
+                            <onclick condition="!String.IsEmpty(Skin.String(spotlightcustom.path))">Skin.Reset(spotlightcustom.path)</onclick>
+                            <enable>Skin.HasSetting(EnableSpotlight)</enable>
+                        </control>
+                        <control type="button" id="96695" description="Configure Custom Lists">
+                            <visible>!Skin.HasSetting(DisableAuraHomeLayout) + Integer.IsEqual(Window.Property(CurrentFocus),9014)</visible>
+                            <include>Defs_Settings_Button</include>
+                            <label>$LOCALIZE[31934]</label> <!-- Configure Custom Lists -->
+                            <visible>String.IsEqual(Skin.String(spotlightcustom.label),Spotlight Custom)</visible>
                             <onclick>ActivateWindow(1160)</onclick>
                         </control>
                         <control type="button" id="96781" description="Configure LiveTV Spotlight">

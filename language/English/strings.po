@@ -4550,3 +4550,23 @@ msgstr ""
 msgctxt "#31931"
 msgid "Episode flags"
 msgstr ""
+
+#: /1080i/Custom_1128_Spotlight_config.xml
+msgctxt "#31932"
+msgid "Choose Custom Spotlight Style"
+msgstr ""
+
+#: /1080i/Custom_1128_Spotlight_config.xml
+msgctxt "#31933"
+msgid "Custom Content"
+msgstr ""
+
+#: /1080i/Custom_1128_Spotlight_config.xml
+msgctxt "#31934"
+msgid "Configure Custom Lists"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31935"
+msgid "Choose Custom Spotlight"
+msgstr ""
